@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "first_name": "Test",
+            "last_name": "User",
+            "email": "test@user.com",
+            "phone": "610-888-7474",
+            "_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyOSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNjEwNzM3MDk2fQ.cBWY9lHYeTS5fyn2t8kVI2XNXdhLY4r_zbgZMNoOSgs"
+        }
+    ],
+    "required": [
+        "_token"
+    ],
+    "properties": {
+        "first_name": {
+            "$id": "#/properties/first_name",
+            "type": "string",
+            "title": "The first_name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test"
+            ]
+        },
+        "last_name": {
+            "$id": "#/properties/last_name",
+            "type": "string",
+            "title": "The last_name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "User"
+            ]
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "default": "",
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                "test@user.com"
+            ],
+            "title": "The email schema",
+            "format": "email",
+            "type": "string"
+        },
+        "phone": {
+            "$id": "#/properties/phone",
+            "default": "",
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                "610-888-7474"
+            ],
+            "title": "The phone schema",
+            "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$",
+            "type": "string"
+        },
+        "_token": {
+            "$id": "#/properties/_token",
+            "type": "string",
+            "title": "The _token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyOSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNjEwNzM3MDk2fQ.cBWY9lHYeTS5fyn2t8kVI2XNXdhLY4r_zbgZMNoOSgs"
+            ]
+        }
+    },
+    "additionalProperties": false
+  }
